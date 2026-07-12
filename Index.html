@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(138, 213, 234);">
+  <div class="container">
+    <h1>Registration Form</h1>
+
+    <form action="sucess.html" method="POST" id="regForm">
+      <label for="name">Name</label>
+      <input id="name" type="text" required>
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" required> Male</label>
+        <label><input type="radio" name="gender"> Female</label>
+        <label><input type="radio" name="gender"> Other</label>
+      </div>
+
+      <label for="lang">Languages Known</label>
+      <input id="lang" type="text" required>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" required>
+
+      <label for="phone">Mobile Number</label>
+      <input id="phone" type="tel" pattern="[0-9]{10}" maxlength="10" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" required></textarea>
+
+      <label for="location">Job Location</label>
+      <select id="location" required>
+        <option value="">Select one</option>
+        <option>Hyderabad</option>
+        <option>Bangalore</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+      </select>
+
+      <label for="cv">CV</label>
+      <input id="cv" type="file" >
+
+      <div class="buttons">
+        <input type="reset" value="Clear">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+
+    <p id="msg"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
